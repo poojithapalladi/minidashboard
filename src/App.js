@@ -18,7 +18,7 @@ function App() {
     setData({ ...result, name, location });
   } catch (error) {
     console.error("Fetch error:", error);
-    alert("❌ Could not reach the backend. Please make sure it's running.");
+    alert("Could not reach the backend. Please make sure it's running.");
   }
 };
 
@@ -64,8 +64,8 @@ function App() {
 
       {data && (
         <div className="mt-6 bg-white p-4 rounded shadow-md w-full max-w-md text-center">
-          <p className="text-xl font-semibold">{data.name} 📍 {data.location}</p>
-          <p className="text-lg font-bold mt-2">⭐ Rating: {data.rating}</p>
+          <p className="text-xl font-semibold">{data.name} {data.location}</p>
+          <p className="text-lg font-bold mt-2"> Rating: {data.rating}</p>
           <p className="text-md">💬 Reviews: {data.reviews}</p>
           <p className="text-sm italic mt-2">{data.headline}</p>
           <button
